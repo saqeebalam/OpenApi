@@ -1,0 +1,32 @@
+Setting up springdoc-openapi
+
+add this dependency in pom.xml
+ <dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-ui</artifactId>
+    <version>1.6.4</version>
+ </dependency>
+
+this url is used to take json data
+  http://localhost:8080/v3/api-docs/
+
+To use a custom path, we can indicate in the application.properties file:
+  springdoc.api-docs.path=/api-docs
+
+The OpenAPI definitions are in JSON format by default. For yaml format, we can obtain the definitions at:
+
+http://localhost:8080/v3/api-docs.yaml
+
+ Integrating springdoc-openapi With Spring WebFlux
+Add this dependency
+<dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-webflux-ui</artifactId>
+    <version>1.6.4</version>
+</dependency>
+
+As before, the docs will be accessible at: swagger url is acceble through this
+
+http://localhost:8080/swagger-ui.html
+
+https://www.baeldung.com/spring-rest-openapi-documentation refrance
